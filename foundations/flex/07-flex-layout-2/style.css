@@ -1,29 +1,97 @@
+@font-face { 
+  font-family: Twemoji;
+  src:
+    local("Twemoji"),
+    local("Twemoji Mozilla"),
+    url("https://xem.github.io/unicode13/Twemoji.ttf")
+      format("truetype");
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  flex: 0 0 auto;
+  width: 100vw;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 12px;
+  font-weight: bold;
+  font-size: 32px;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  flex: 0 0 auto;
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+a {
+  font-family: Twemoji, -apple-system, BlinkMacSystemFont;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+.card-container {
+  display: flex;
+  gap: 12px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 48px;
+}
+
+.card {
+  padding: 12px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  flex: 0 0 auto;
+  height: 300px;
+  width: 300px;
 }
